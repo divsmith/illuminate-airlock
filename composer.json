@@ -1,6 +1,6 @@
 {
     "name": "divsmith/laravel-decouplr",
-    "description": "",
+    "description": "Laravel adapters for divsmith/decouplr.",
     "authors": [
         {
             "name": "Parker Smith",
