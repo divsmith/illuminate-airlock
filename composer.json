@@ -9,9 +9,10 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "illuminate/support": "4.2.*",
+        "divsmith/decouplr": "1.0.*"
     },
-    "autoload": {
+    "autoload": {	
         "psr-4": {
             "LaravelDecouplr\\": "src/"
         }
