@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Events\Dispatcher;
 
-class DispatcherDecouplr extends Decouplr{
+abstract class DispatcherDecouplr extends Decouplr{
 
     public function __construct(Dispatcher $dispatcher)
     {
