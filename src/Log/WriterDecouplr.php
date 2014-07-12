@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Log\Writer;
 
-abstract class LaravelLogDecouplr extends Decouplr {
+abstract class WriterDecouplr extends Decouplr {
 
     public function __construct(Writer $writer){
         $this->decoupled = $writer;
