@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Config\Repository;
 
-class LaravelConfigDecouplr extends Decouplr {
+abstract class LaravelConfigDecouplr extends Decouplr {
 
     public function __construct(Repository $repository)
     {
