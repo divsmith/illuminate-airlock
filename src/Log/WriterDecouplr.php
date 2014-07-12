@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\Log;
+<?php namespace IlluminateDecouplr\Log;
 
 use Decouplr\Decouplr;
 use Illuminate\Log\Writer;

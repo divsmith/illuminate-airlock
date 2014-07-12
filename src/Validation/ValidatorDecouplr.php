@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\Validator; 
+<?php namespace IlluminateDecouplr\Validator;
 
 use Decouplr\Decouplr;
 use Illuminate\Validation\Validator;

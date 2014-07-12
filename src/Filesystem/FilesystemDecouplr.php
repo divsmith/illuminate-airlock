@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\Filesystem;
+<?php namespace IlluminateDecouplr\Filesystem;
 
 use Decouplr\Decouplr;
 use Illuminate\Filesystem\Filesystem;

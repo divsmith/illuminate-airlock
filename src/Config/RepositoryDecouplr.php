@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\Config; 
+<?php namespace IlluminateDecouplr\Config;
 
 use Decouplr\Decouplr;
 use Illuminate\Config\Repository;

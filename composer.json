@@ -13,7 +13,7 @@
     },
     "autoload": {	
         "psr-4": {
-            "LaravelDecouplr\\": "src/"
+            "IlluminateDecouplr\\": "src/"
         }
     },
     "minimum-stability": "stable"

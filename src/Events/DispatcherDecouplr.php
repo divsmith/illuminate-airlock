@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\Events;
+<?php namespace IlluminateDecouplr\Events;
 
 use Decouplr\Decouplr;
 use Illuminate\Events\Dispatcher;
