@@ -1,4 +1,4 @@
-<?php namespace LaravelDecouplr\App; 
+<?php namespace LaravelDecouplr\Foundation;
 
 use Decouplr\Decouplr;
 use Illuminate\Foundation\Application;
