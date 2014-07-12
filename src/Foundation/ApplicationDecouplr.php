@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Foundation\Application;
 
-class LaravelAppDecouplr {
+class ApplicationDecouplr {
 
     public function __construct(Application $app)
     {
