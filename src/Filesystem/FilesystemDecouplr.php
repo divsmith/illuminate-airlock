@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Filesystem\Filesystem;
 
-class FilesystemDecouplr extends Decouplr {
+abstract class FilesystemDecouplr extends Decouplr {
 
     public function __construct(Filesystem $files)
     {
