@@ -1,9 +1,9 @@
-<?php namespace LaravelDecouplr; 
+<?php namespace LaravelDecouplr\Log;
 
 use Decouplr\Decouplr;
 use Illuminate\Log\Writer;
 
-class LaravelLogDecouplr extends Decouplr {
+abstract class LaravelLogDecouplr extends Decouplr {
 
     public function __construct(Writer $writer){
         $this->decoupled = $writer;
