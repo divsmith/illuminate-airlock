@@ -3,7 +3,7 @@
 use Decouplr\Decouplr;
 use Illuminate\Events\Dispatcher;
 
-class LaravelEventDecouplr extends Decouplr{
+class DispatcherDecouplr extends Decouplr{
 
     public function __construct(Dispatcher $dispatcher)
     {
