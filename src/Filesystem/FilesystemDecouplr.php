@@ -1,9 +1,9 @@
-<?php namespace LaravelDecouplr\File; 
+<?php namespace LaravelDecouplr\Filesystem;
 
 use Decouplr\Decouplr;
 use Illuminate\Filesystem\Filesystem;
 
-class LaravelFileDecouplr extends Decouplr {
+class FilesystemDecouplr extends Decouplr {
 
     public function __construct(Filesystem $files)
     {
