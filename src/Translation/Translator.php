@@ -1,7 +1,7 @@
 <?php namespace IlluminateDecouplr\Translation; 
 
 use Decouplr\Decouplr;
-use IlluminateDecouplr\Translation\Translator as IlluminateTranslator;
+use Illuminate\Translation\Translator as IlluminateTranslator;
 
 abstract class Translator extends Decouplr {
 
