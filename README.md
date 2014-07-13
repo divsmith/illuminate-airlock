@@ -67,7 +67,7 @@ Installation
     ```js
     {
         "require": {
-            "divsmith/decouplr": "4.2.*" // Follows Laravel major versions, i.e. 4.2, 4.3, etc.
+            "divsmith/decouplr": "~4.2.0" // Follows Laravel major versions, i.e. 4.2, 4.3, etc.
         }
     }
     ```
