@@ -27,14 +27,14 @@ class UserSubscribedCommandHandler {
 
     protected $dispatcher;
 
-    public function __construct(\Illuminate\Events\Dispatcher $dispatcher)
+    public function __construct(\Illuminate\Events\Dispatcher $dispatcher) // Less tightly coupled
     {
         $this->dispatcher = $dispatcher;
     }
 
     public function handle($command)
     {
-        $this->dispatcher->fire('user.subscribed', $command); // Less tightly coupled
+        $this->dispatcher->fire('user.subscribed', $command);
     }
 }
 ```
@@ -49,14 +49,14 @@ class UserSubscribedCommandHandler {
     
     protected $dispatcher;
     
-    public function __construct(\Acme\Events\EventInterface $dispatcher)
+    public function __construct(\Acme\Events\EventInterface $dispatcher) // Completely decoupled
     {
         $this->dispatcher = $dispatcher;
     }
     
     public function handle($command)
     {
-        $this->dispatcher->fire('user.subscribed', $command); // Completely decoupled
+        $this->dispatcher->fire('user.subscribed', $command);
     }
 }
 ```
@@ -100,7 +100,7 @@ Usage
     Each ```IlluminateDecouplr``` class has the same public methods as the original ```Illuminate``` class, so for the most part as long 
     as your interface sticks to them you don't need to implement them in your class.
     
-3. Bind your adapter implementation to the interface in the IoC container via the service provider
+3. Bind your implementation to the interface in the IoC container via the service provider
 
     ```php
     // vendor\divsmith\illuminate-decouplr\src\IlluminateDecouplrServiceProvider.php
@@ -111,7 +111,7 @@ Usage
         {
             $this->app->bind('\Acme\Events\EventInterface', function() 
             {
-                return new \Acme\Events\IlluminateEventAdapter;
+                return new \Acme\Events\IlluminateEvents;
             }
         }
     }
