@@ -138,7 +138,8 @@ Notes
 -----
 1. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateDecouplr
     adapter. This is because it's not explicitly defined in the Illuminate class's public API and instead gets called
-    through the ```__call()``` magic method. Feel free to add it to the IlluminateDecouplr adapter and submit a pull request.
+    through the ```__call()``` magic method. Feel free to add the concrete method to the IlluminateDecouplr adapter
+    and submit a pull request.
     
 2. You may notice that some of Laravel's facades don't have IlluminateDecouplr adapters provided. I made a conscious
     decision to leave out the ones that deal with application logic to help keep domain logic clean. If you feel that
