@@ -100,18 +100,18 @@ Usage
     public methods as the original ```Illuminate``` class, so for the most part as long as your interface sticks to them
     you don't need to implement them in your adapter.
     
-3. Bind your adapter implementation to the interface in the IoC container via a service provider
+3. Bind your adapter implementation to the interface in the IoC container via the service provider
 
     ```php
-    // Acme\AcmeServiceProvider.php
+    // vendor\divsmith\illuminate-decouplr\src\IlluminateDecouplrServiceProvider.php
     
-    class AcmeServiceProvider extends \Illuminate\Support\ServiceProvider {
+    class IlluminateDecouplrServiceProvider extends ServiceProvider {
         
         public function register()
         {
-            $this->app->bind('Acme\Events\EventInterface', function() 
+            $this->app->bind('\Acme\Events\EventInterface', function() 
             {
-                return new Acme\Events\IlluminateEventAdapter;
+                return new \Acme\Events\IlluminateEventAdapter;
             }
         }
     }
@@ -120,14 +120,14 @@ Usage
     and add it to your providers array
     
     ```php
-    // app/config/app.php
+    // app\config\app.php
     
         ....
         'Illuminate\Session\SessionServiceProvider',
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-        '\Acme\AcmeServiceProvider'
+        '\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
     ),
     ....
     ```
