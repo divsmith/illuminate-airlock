@@ -13,7 +13,7 @@ class UserSubscribedCommandHandler {
     {
         // Do everything involved with a new user subscription
         
-        Event::fire('user.subscribed', $command); // Very tight coupling!
+        Event::fire('user.subscribed', $command); // Very tightly coupled!
     }
 }
 ```
@@ -87,18 +87,18 @@ Usage
     }
     ```
     
-2. Next, create an adapter class that implements the interface and extends the corresponding IlluminateDecouplr class.
+2. Next, create a class that implements the interface and extends the corresponding IlluminateDecouplr class.
 
     ```php
-    // Acme\Events\IlluminateEventAdapter.php
+    // Acme\Events\IlluminateEvents.php
     
-    class EventAdapter implements EventInterface extends \IlluminateDecouplr\Events\Dispatcher {}
+    class IlluminateEvents implements EventInterface extends \IlluminateDecouplr\Events\Dispatcher {}
     ```
     
-    The naming conventions follow Laravel's, so ```Illuminate\Events\Dispatcher``` becomes ```IlluminateDecouplr\Events\Dispatcher```,
-    ```Illuminate\Log\Writer``` becomes ```IlluminateDecouplr\Log\Writer```, etc. Each ```IlluminateDecouplr``` class has the same
-    public methods as the original ```Illuminate``` class, so for the most part as long as your interface sticks to them
-    you don't need to implement them in your adapter.
+    IlluminateDecouplr's naming conventions follow Laravel's, so the IlluminateDecouplr adapter for ```Illuminate\Events\Dispatcher```
+    would be ```IlluminateDecouplr\Events\Dispatcher```, ```Illuminate\Log\Writer``` would be ```IlluminateDecouplr\Log\Writer```, etc. 
+    Each ```IlluminateDecouplr``` class has the same public methods as the original ```Illuminate``` class, so for the most part as long 
+    as your interface sticks to them you don't need to implement them in your class.
     
 3. Bind your adapter implementation to the interface in the IoC container via the service provider
 
@@ -134,8 +134,18 @@ Usage
     
 4. Enjoy!
 
+Notes
+-----
+1. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateDecouplr
+    adapter. This is because it's not explicitly defined in the Illuminate class's public API and instead gets called
+    through the ```__call()``` magic method. Feel free to add it to the IlluminateDecouplr adapter and submit a pull request.
+    
+2. You may notice that some of Laravel's facades don't have IlluminateDecouplr adapters provided. I made a conscious
+    decision to leave out the ones that deal with application logic to help keep domain logic clean. If you feel that
+    a valid one has been left out, either send me a message or create the associated adapter and submit a pull request.
+    
 Contributing
 ------------
-I'm open to any and all pull requests, from typo fixes to methods that can't be documented in the Illuminate class 
-documentation due to the use of ```__call()```.
+I'm open to any and all pull requests, from typos to missing method additions to new adapters. Please submit all pull
+requests to the associated dev branch (i.e. 4.2-dev, 4.3-dev, etc).
     
