@@ -1,31 +1,16 @@
-<?php namespace IlluminateDecouplr\Config;
+<?php namespace IlluminateDecouplr\Cache; 
 
 use Decouplr\Decouplr;
-use Illuminate\Config\Repository;
+use Illuminate\Cache\Repository as IlluminateRepository;
 
-abstract class LaravelConfigDecouplr extends Decouplr {
+abstract class Repository extends Decouplr {
 
-    public function __construct(Repository $repository)
+    public function __construct(IlluminateRepository $repo)
     {
-        $this->decoupled = $repository;
-    }
-
-    public function parseKey()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function setParsedKey()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
+        $this->decoupled = $repo;
     }
 
     public function has()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function hasGroup()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
@@ -35,52 +20,47 @@ abstract class LaravelConfigDecouplr extends Decouplr {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function set()
+    public function pull()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function package()
+    public function put()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function afterLoading()
+    public function add()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function addNamespace()
+    public function remember()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getNamespaces()
+    public function sear()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getLoader()
+    public function rememberForever()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function setLoader()
+    public function getDefaultCacheTime()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getEnvironment()
+    public function setDefaultCacheTime()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getAfterLoadCallbacks()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function getItems()
+    public function getStore()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }

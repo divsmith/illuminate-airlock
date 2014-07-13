@@ -1,11 +1,11 @@
 <?php namespace IlluminateDecouplr\Encryption; 
 
 use Decouplr\Decouplr;
-use Illuminate\Encryption\Encrypter;
+use Illuminate\Encryption\Encrypter as IlluminateEncrypter;
 
-abstract class EncrypterDecouplr extends Decouplr {
+abstract class Encrypter extends Decouplr {
 
-    public function __construct(Encrypter $encrypter)
+    public function __construct(IlluminateEncrypter $encrypter)
     {
         $this->decoupled = $encrypter;
     }

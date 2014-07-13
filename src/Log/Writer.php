@@ -1,11 +1,11 @@
 <?php namespace IlluminateDecouplr\Log;
 
 use Decouplr\Decouplr;
-use Illuminate\Log\Writer;
+use Illuminate\Log\Writer as IlluminateWriter;
 
-abstract class WriterDecouplr extends Decouplr {
+abstract class Writer extends Decouplr {
 
-    public function __construct(Writer $writer){
+    public function __construct(IlluminateWriter $writer){
         $this->decoupled = $writer;
     }
 

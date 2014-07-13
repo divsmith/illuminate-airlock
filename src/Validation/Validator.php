@@ -1,11 +1,11 @@
 <?php namespace IlluminateDecouplr\Validator;
 
 use Decouplr\Decouplr;
-use Illuminate\Validation\Validator;
+use Illuminate\Validation\Validator as IlluminateValidator;
 
-abstract class ValidatorDecouplr extends Decouplr {
+abstract class Validator extends Decouplr {
 
-    public function __construct(Validator $validator){
+    public function __construct(IlluminateValidator $validator){
         $this->decoupled = $validator;
     }
 

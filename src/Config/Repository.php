@@ -1,16 +1,31 @@
-<?php namespace IlluminateDecouplr\Filesystem;
+<?php namespace IlluminateDecouplr\Config;
 
 use Decouplr\Decouplr;
-use Illuminate\Filesystem\Filesystem;
+use Illuminate\Config\Repository as IlluminateRepository;
 
-abstract class FilesystemDecouplr extends Decouplr {
+abstract class Repository extends Decouplr {
 
-    public function __construct(Filesystem $files)
+    public function __construct(IlluminateRepository $repo)
     {
-        $this->decoupled = $files;
+        $this->decoupled = $repo;
     }
 
-    public function exists()
+    public function parseKey()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
+    public function setParsedKey()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
+    public function has()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
+    public function hasGroup()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
@@ -20,117 +35,72 @@ abstract class FilesystemDecouplr extends Decouplr {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getRequire()
+    public function set()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function requireOnce()
+    public function package()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function put()
+    public function afterLoading()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function prepend()
+    public function addNamespace()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function append()
+    public function getNamespaces()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function delete()
+    public function getLoader()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function move()
+    public function setLoader()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function copy()
+    public function getEnvironment()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function extension()
+    public function getAfterLoadCallbacks()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function type()
+    public function getItems()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function size()
+    public function offsetExists()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function lastModified()
+    public function offsetGet()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function isDirectory()
+    public function offsetSet()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function isWritable()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function isFile()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function glob()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function files()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function allFiles()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function directories()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function makeDirectory()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function copyDirectory()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function deleteDirectory()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function cleanDirectory()
+    public function offsetUnset()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }

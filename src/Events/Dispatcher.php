@@ -1,86 +1,71 @@
-<?php namespace IlluminateDecouplr\Cache; 
+<?php namespace IlluminateDecouplr\Events;
 
 use Decouplr\Decouplr;
-use Illuminate\Cache\Repository;
+use Illuminate\Events\Dispatcher as IlluminateDispatcher;
 
-abstract class RepositoryDecouplr extends Decouplr {
+abstract class Dispatcher extends Decouplr{
 
-    public function __construct(Repository $repository)
+    public function __construct(IlluminateDispatcher $dispatcher)
     {
-        $this->decoupled = $repository;
+        $this->decoupled = $dispatcher;
     }
 
-    public function has()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function get()
+    public function listen()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function pull()
+    public function hasListeners()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function put()
+    public function queue()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function add()
+    public function subscribe()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function remember()
+    public function until()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function sear()
+    public function flush()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function rememberForever()
+    public function firing()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getDefaultCacheTime()
+    public function fire()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function setDefaultCacheTime()
+    public function getListeners()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function getStore()
+    public function makeListener()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function offsetExists()
+    public function createClassListener()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
-    public function offsetGet()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function offsetSet()
-    {
-        return $this->delegate(__FUNCTION__, func_get_args());
-    }
-
-    public function offsetUnset()
+    public function forget()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }

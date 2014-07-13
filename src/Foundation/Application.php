@@ -1,11 +1,11 @@
 <?php namespace IlluminateDecouplr\Foundation;
 
 use Decouplr\Decouplr;
-use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Application as IlluminateApplication;
 
-abstract class ApplicationDecouplr {
+abstract class Application extends Decouplr {
 
-    public function __construct(Application $app)
+    public function __construct(IlluminateApplication $app)
     {
         $this->decoupled = $app;
     }
