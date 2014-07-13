@@ -84,6 +84,11 @@ abstract class Validator extends Decouplr {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
+    public function setData()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
     public function getRules()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
