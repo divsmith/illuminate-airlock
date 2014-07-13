@@ -120,6 +120,11 @@ abstract class Application extends Decouplr {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
 
+    public function offsetSet()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
     public function offsetUnset()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
@@ -226,6 +231,11 @@ abstract class Application extends Decouplr {
     }
 
     public function boot()
+    {
+        return $this->delegate(__FUNCTION__, func_get_args());
+    }
+
+    public function booting()
     {
         return $this->delegate(__FUNCTION__, func_get_args());
     }
