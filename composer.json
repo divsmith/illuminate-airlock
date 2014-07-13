@@ -1,6 +1,6 @@
 {
     "name": "divsmith/illuminate-decouplr",
-    "description": "Laravel adapters for divsmith/decouplr.",
+    "description": "Illuminate adapters for divsmith/decouplr.",
     "authors": [
         {
             "name": "Parker Smith",
