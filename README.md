@@ -136,12 +136,16 @@ Usage
 
 Notes
 -----
-1. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateDecouplr
+1. You may have noticed that there is no ```tests``` directory. I purposefully left out unit tests because this package
+    contains no logic to test. It simply passes along method calls; as such, any unit test written would only be able
+    to verify that a specific function was called and that's not the purpose of unit testing.
+    
+2. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateDecouplr
     adapter. This is because it's not explicitly defined in the Illuminate class's public API and instead gets called
     through the ```__call()``` magic method. Feel free to add the concrete method to the IlluminateDecouplr adapter
     and submit a pull request.
     
-2. You may notice that some of Laravel's facades don't have IlluminateDecouplr adapters provided. I made a conscious
+3. You may notice that some of Laravel's facades don't have IlluminateDecouplr adapters provided. I made a conscious
     decision to leave out the ones that deal with application logic to help keep domain logic clean. If you feel that
     a valid one has been left out, either send me a message or create the associated adapter and submit a pull request.
     
