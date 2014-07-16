@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Log;
+<?php namespace Divsmith\IlluminateDecouplr\Log;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Log\Writer as IlluminateWriter;
 
 abstract class Writer extends Decouplr {

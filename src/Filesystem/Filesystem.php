@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Filesystem;
+<?php namespace Divsmith\IlluminateDecouplr\Filesystem;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
 
 abstract class Filesystem extends Decouplr {

@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Events;
+<?php namespace Divsmith\IlluminateDecouplr\Events;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Events\Dispatcher as IlluminateDispatcher;
 
 abstract class Dispatcher extends Decouplr{

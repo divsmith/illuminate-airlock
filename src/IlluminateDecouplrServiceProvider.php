@@ -1,4 +1,4 @@
-<?php namespace IlluminateDecouplr;
+<?php namespace Divsmith\IlluminateDecouplr;
 
 use Illuminate\Support\ServiceProvider;
 

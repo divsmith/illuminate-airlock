@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Redis; 
+<?php namespace Divsmith\IlluminateDecouplr\Redis;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Redis\Database as IlluminateDatabase;
 
 abstract class Database extends Decouplr {

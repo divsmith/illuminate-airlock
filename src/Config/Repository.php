@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Config;
+<?php namespace Divsmith\IlluminateDecouplr\Config;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Config\Repository as IlluminateRepository;
 
 abstract class Repository extends Decouplr {

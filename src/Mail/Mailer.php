@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Mail; 
+<?php namespace Divsmith\IlluminateDecouplr\Mail;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Mail\Mailer as IlluminateMailer;
 
 abstract class Mailer extends Decouplr {

@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Queue; 
+<?php namespace Divsmith\IlluminateDecouplr\Queue;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Queue\QueueManager as IlluminateQueueManager;
 
 abstract class QueueManager extends Decouplr {

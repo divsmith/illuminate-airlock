@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Validator;
+<?php namespace Divsmith\IlluminateDecouplr\Validator;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Validation\Validator as IlluminateValidator;
 
 abstract class Validator extends Decouplr {

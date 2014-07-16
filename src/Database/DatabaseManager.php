@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Database; 
+<?php namespace Divsmith\IlluminateDecouplr\Database;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Database\DatabaseManager as IlluminateDatabaseManager;
 
 abstract class DatabaseManager extends Decouplr {

@@ -127,7 +127,7 @@ Usage
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-        '\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
+        '\Illuminate-Decouplr\IlluminateDecouplrServiceProvider'
     ),
     ....
     ```

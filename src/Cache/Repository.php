@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Cache; 
+<?php namespace Divsmith\IlluminateDecouplr\Cache;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Cache\Repository as IlluminateRepository;
 
 abstract class Repository extends Decouplr {

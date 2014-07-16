@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Encryption; 
+<?php namespace Divsmith\IlluminateDecouplr\Encryption;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Encryption\Encrypter as IlluminateEncrypter;
 
 abstract class Encrypter extends Decouplr {

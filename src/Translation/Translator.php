@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Translation; 
+<?php namespace Divsmith\IlluminateDecouplr\Translation;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Translation\Translator as IlluminateTranslator;
 
 abstract class Translator extends Decouplr {

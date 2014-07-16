@@ -1,6 +1,6 @@
-<?php namespace IlluminateDecouplr\Foundation;
+<?php namespace Divsmith\IlluminateDecouplr\Foundation;
 
-use Decouplr\Decouplr;
+use Divsmith\Decouplr\Decouplr;
 use Illuminate\Foundation\Application as IlluminateApplication;
 
 abstract class Application extends Decouplr {
