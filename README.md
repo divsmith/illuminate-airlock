@@ -152,5 +152,5 @@ Notes
 Contributing
 ------------
 I'm open to any and all pull requests, from typos to missing method additions to new adapters. Please submit all pull
-requests to the associated dev branch (i.e. 4.2-dev, 4.3-dev, etc).
+requests to the dev branch.
     
