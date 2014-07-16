@@ -67,7 +67,7 @@ Installation
     ```js
     {
         "require": {
-            "divsmith/decouplr": "~4.2.0" // Follows Laravel major versions, i.e. 4.2, 4.3, etc.
+            "divsmith/decouplr": "~1.0.0"
         }
     }
     ```
@@ -96,7 +96,7 @@ Usage
     ```
     
     IlluminateDecouplr's naming conventions follow Laravel's, so the IlluminateDecouplr adapter for ```Illuminate\Events\Dispatcher```
-    would be ```IlluminateDecouplr\Events\Dispatcher```, ```Illuminate\Log\Writer``` would be ```IlluminateDecouplr\Log\Writer```, etc. 
+    would be ```Divsmith\IlluminateDecouplr\Events\Dispatcher```, ```Illuminate\Log\Writer``` would be ```Divsmith\IlluminateDecouplr\Log\Writer```, etc. 
     Each ```IlluminateDecouplr``` class has the same public methods as the original ```Illuminate``` class, so for the most part as long 
     as your interface sticks to them you don't need to implement them in your class.
     
@@ -127,7 +127,7 @@ Usage
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-        '\Illuminate-Decouplr\IlluminateDecouplrServiceProvider'
+        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
     ),
     ....
     ```
