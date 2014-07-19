@@ -67,7 +67,7 @@ Installation
     ```js
     {
         "require": {
-            "divsmith/decouplr": "~1.0.0"
+            "divsmith/decouplr": "dev-master"
         }
     }
     ```
