@@ -1,6 +1,6 @@
 {
     "name": "divsmith/illuminate-airlock",
-    "description": "Illuminate adapters for Airlock.",
+    "description": "Airlock adapters for common Laravel Illuminate classes.",
     "authors": [
         {
             "name": "Parker Smith",
