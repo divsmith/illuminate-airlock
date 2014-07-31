@@ -1,6 +1,6 @@
 {
-    "name": "divsmith/illuminate-decouplr",
-    "description": "Illuminate adapters for Decouplr.",
+    "name": "divsmith/illuminate-airlock",
+    "description": "Illuminate adapters for Airlock.",
     "authors": [
         {
             "name": "Parker Smith",
@@ -9,12 +9,12 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "divsmith/decouplr": "~1.0",
+        "divsmith/airlock": "~1.0.1",
 		"laravel/framework": "~4.2.0"
     },
     "autoload": {	
         "psr-4": {
-            "Divsmith\\IlluminateDecouplr\\": "src/"
+            "Divsmith\\IlluminateAirlock\\": "src/"
         }
     },
     "minimum-stability": "stable"
