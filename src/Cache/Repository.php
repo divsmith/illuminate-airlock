@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Cache;
+<?php namespace Divsmith\IlluminateAirlock\Cache;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Cache\Repository as IlluminateRepository;
 
-abstract class Repository extends Decouplr {
+abstract class Repository extends Airlock {
 
     public function __construct(IlluminateRepository $repo)
     {
-        $this->decoupled = $repo;
+        $this->locker = $repo;
     }
 
     public function has()
