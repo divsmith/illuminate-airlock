@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Config;
+<?php namespace Divsmith\IlluminateAirlock\Config;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Config\Repository as IlluminateRepository;
 
-abstract class Repository extends Decouplr {
+abstract class Repository extends Airlock {
 
     public function __construct(IlluminateRepository $repo)
     {
-        $this->decoupled = $repo;
+        $this->locker = $repo;
     }
 
     public function parseKey()
