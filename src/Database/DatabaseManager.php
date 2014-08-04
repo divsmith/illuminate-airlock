@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Database;
+<?php namespace Divsmith\IlluminateAirlock\Database;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Database\DatabaseManager as IlluminateDatabaseManager;
 
-abstract class DatabaseManager extends Decouplr {
+abstract class DatabaseManager extends Airlock {
 
     public function __construct(IlluminateDatabaseManager $manager)
     {
-        $this->decoupled = $manager;
+        $this->locker = $manager;
     }
 
     public function connection()
