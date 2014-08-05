@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Encryption;
+<?php namespace Divsmith\IlluminateAirlock\Encryption;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Encryption\Encrypter as IlluminateEncrypter;
 
-abstract class Encrypter extends Decouplr {
+abstract class Encrypter extends Airlock {
 
     public function __construct(IlluminateEncrypter $encrypter)
     {
-        $this->decoupled = $encrypter;
+        $this->locker = $encrypter;
     }
 
     public function encrypt()
