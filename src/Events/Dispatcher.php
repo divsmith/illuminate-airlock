@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Events;
+<?php namespace Divsmith\IlluminateAirlock\Events;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Events\Dispatcher as IlluminateDispatcher;
 
-abstract class Dispatcher extends Decouplr{
+abstract class Dispatcher extends Airlock {
 
     public function __construct(IlluminateDispatcher $dispatcher)
     {
-        $this->decoupled = $dispatcher;
+        $this->locker = $dispatcher;
     }
 
     public function listen()
