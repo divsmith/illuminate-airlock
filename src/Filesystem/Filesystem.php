@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Filesystem;
+<?php namespace Divsmith\IlluminateAirlock\Filesystem;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
 
-abstract class Filesystem extends Decouplr {
+abstract class Filesystem extends Airlock {
 
     public function __construct(IlluminateFilesystem $files)
     {
-        $this->decoupled = $files;
+        $this->locker = $files;
     }
 
     public function exists()
