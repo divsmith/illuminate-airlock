@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Foundation;
+<?php namespace Divsmith\IlluminateAirlock\Foundation;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Foundation\Application as IlluminateApplication;
 
-abstract class Application extends Decouplr {
+abstract class Application extends Airlock {
 
     public function __construct(IlluminateApplication $app)
     {
-        $this->decoupled = $app;
+        $this->locker = $app;
     }
 
     public function bound()
