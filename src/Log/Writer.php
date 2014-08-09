@@ -1,12 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Log;
+<?php namespace Divsmith\IlluminateAirlock\Log;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Log\Writer as IlluminateWriter;
 
-abstract class Writer extends Decouplr {
+abstract class Writer extends Airlock {
 
-    public function __construct(IlluminateWriter $writer){
-        $this->decoupled = $writer;
+    public function __construct(IlluminateWriter $writer)
+    {
+        $this->locker = $writer;
     }
 
     public function useFiles()
