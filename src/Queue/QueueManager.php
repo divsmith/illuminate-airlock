@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Queue;
+<?php namespace Divsmith\IlluminateAirlock\Queue;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Queue\QueueManager as IlluminateQueueManager;
 
-abstract class QueueManager extends Decouplr {
+abstract class QueueManager extends Airlock {
 
     public function __construct(IlluminateQueueManager $manager)
     {
-        $this->decoupled = $manager;
+        $this->locker = $manager;
     }
 
     public function looping()
