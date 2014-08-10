@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Mail;
+<?php namespace Divsmith\IlluminateAirlock\Mail;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Mail\Mailer as IlluminateMailer;
 
-abstract class Mailer extends Decouplr {
+abstract class Mailer extends Airlock {
 
     public function __construct(IlluminateMailer $mailer)
     {
-        $this->decoupled = $mailer;
+        $this->locker = $mailer;
     }
 
     public function alwaysFrom()
