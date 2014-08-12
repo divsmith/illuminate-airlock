@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Translation;
+<?php namespace Divsmith\IlluminateAirlock\Translation;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Translation\Translator as IlluminateTranslator;
 
-abstract class Translator extends Decouplr {
+abstract class Translator extends Airlock {
 
     public function __construct(IlluminateTranslator $translator)
     {
-        $this->decoupled = $translator;
+        $this->locker = $translator;
     }
 
     public function parseKey()
