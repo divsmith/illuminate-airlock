@@ -1,13 +1,13 @@
-<?php namespace Divsmith\IlluminateDecouplr\Redis;
+<?php namespace Divsmith\IlluminateAirlock\Redis;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Redis\Database as IlluminateDatabase;
 
-abstract class Database extends Decouplr {
+abstract class Database extends Airlock {
 
     public function __construct(IlluminateDatabase $database)
     {
-        $this->decoupled = $database;
+        $this->locker = $database;
     }
 
     public function connection()
