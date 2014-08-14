@@ -1,12 +1,12 @@
-<?php namespace Divsmith\IlluminateDecouplr\Validator;
+<?php namespace Divsmith\IlluminateAirlock\Validator;
 
-use Divsmith\Decouplr\Decouplr;
+use Divsmith\Airlock\Airlock;
 use Illuminate\Validation\Validator as IlluminateValidator;
 
-abstract class Validator extends Decouplr {
+abstract class Validator extends Airlock {
 
     public function __construct(IlluminateValidator $validator){
-        $this->decoupled = $validator;
+        $this->locker = $validator;
     }
 
     public function sometimes()
