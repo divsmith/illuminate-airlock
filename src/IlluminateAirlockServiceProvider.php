@@ -1,8 +1,8 @@
-<?php namespace Divsmith\IlluminateDecouplr;
+<?php namespace Divsmith\IlluminateAirlock;
 
 use Illuminate\Support\ServiceProvider;
 
-class IlluminateDecouplrServiceProvider extends ServiceProvider {
+class IlluminateAirlockServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
