@@ -1,4 +1,4 @@
-Illuminate-Decouplr
+Illuminate-Airlock
 ===================
 Laravel provides tons of functionality out of the box with a beautiful and easy to use interface via it's
 various facades and the Illuminate classes that power them. While this is great for application level classes
@@ -40,7 +40,7 @@ class UserSubscribedCommandHandler {
 ```
 
 but this approach still leaves us directly tied to the Illuminate\Events\Dispatcher class.
-Illuminate-Decouplr lets us break that coupling and use an interface that we specify and control.
+Illuminate-Airlock lets us break that coupling and use an interface that we specify and control.
 
 ```php
 // Acme\Handlers\UserSubscribedCommandHandler.php
@@ -67,7 +67,7 @@ Installation
     ```js
     {
         "require": {
-            "divsmith/decouplr": "dev-master"
+            "divsmith/airlock": "dev-master"
         }
     }
     ```
@@ -87,25 +87,25 @@ Usage
     }
     ```
     
-2. Next, create a class that implements the interface and extends the corresponding IlluminateDecouplr class.
+2. Next, create a class that implements the interface and extends the corresponding IlluminateAirlock class.
 
     ```php
     // Acme\Events\IlluminateEvents.php
     
-    class IlluminateEvents implements EventInterface extends \IlluminateDecouplr\Events\Dispatcher {}
+    class IlluminateEvents implements EventInterface extends \IlluminateAirlock\Events\Dispatcher {}
     ```
     
-    IlluminateDecouplr's naming conventions follow Laravel's, so the IlluminateDecouplr adapter for ```Illuminate\Events\Dispatcher```
-    would be ```Divsmith\IlluminateDecouplr\Events\Dispatcher```, ```Illuminate\Log\Writer``` would be ```Divsmith\IlluminateDecouplr\Log\Writer```, etc. 
-    Each ```IlluminateDecouplr``` class has the same public methods as the original ```Illuminate``` class, so for the most part as long 
+    IlluminateAirlock's naming conventions follow Laravel's, so the IlluminateAirlock adapter for ```Illuminate\Events\Dispatcher```
+    would be ```Divsmith\IlluminateAirlock\Events\Dispatcher```, ```Illuminate\Log\Writer``` would be ```Divsmith\IlluminateAirlock\Log\Writer```, etc.
+    Each ```IlluminateAirlock``` class has the same public methods as the original ```Illuminate``` class, so for the most part as long
     as your interface sticks to them you don't need to implement them in your class.
     
 3. Bind your implementation to the interface in the IoC container via the service provider
 
     ```php
-    // vendor\divsmith\illuminate-decouplr\src\IlluminateDecouplrServiceProvider.php
+    // vendor\divsmith\illuminate-Airlock\src\IlluminateAirlockServiceProvider.php
     
-    class IlluminateDecouplrServiceProvider extends ServiceProvider {
+    class IlluminateAirlockServiceProvider extends ServiceProvider {
         
         public function register()
         {
@@ -127,7 +127,7 @@ Usage
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
+        'Divsmith\IlluminateAirlock\IlluminateAirlockServiceProvider'
     ),
     ....
     ```
@@ -140,12 +140,12 @@ Notes
     contains no logic to test. It simply passes along method calls; as such, any unit test written would only be able
     to verify that a specific function was called and that's not the purpose of unit testing.
     
-2. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateDecouplr
+2. You may occasionally find an Illuminate method that hasn't been implemented in the associated IlluminateAirlock
     adapter. This is because it's not explicitly defined in the Illuminate class's public API and instead gets called
-    through the ```__call()``` magic method. Feel free to add the concrete method to the IlluminateDecouplr adapter
+    through the ```__call()``` magic method. Feel free to add the concrete method to the IlluminateAirlock adapter
     and submit a pull request.
     
-3. You may notice that some of Laravel's facades don't have IlluminateDecouplr adapters provided. I made a conscious
+3. You may notice that some of Laravel's facades don't have IlluminateAirlock adapters provided. I made a conscious
     decision to leave out the ones that deal with application logic to help keep domain logic clean. If you feel that
     a valid one has been left out, either send me a message or create the associated adapter and submit a pull request.
     
